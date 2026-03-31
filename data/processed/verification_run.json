@@ -1,0 +1,152 @@
+[
+  {
+    "record_id":"customer_tickets__csv__0001",
+    "source_name":"customer_tickets",
+    "source_type":"csv",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\customer_tickets.csv",
+    "title":"customer_tickets row 1",
+    "content":"ticket_id: CS-101 | customer: Mira Foods | issue: Delayed invoice parsing | priority: high",
+    "normalized_text":"customer_tickets row 1. ticket_id: CS-101 | customer: Mira Foods | issue: Delayed invoice parsing | priority: high",
+    "metadata_json":"{\"columns\": [\"ticket_id\", \"customer\", \"issue\", \"priority\"], \"fields\": {\"customer\": \"Mira Foods\", \"issue\": \"Delayed invoice parsing\", \"priority\": \"high\", \"ticket_id\": \"CS-101\"}, \"kind\": \"csv_row\"}"
+  },
+  {
+    "record_id":"customer_tickets__csv__0002",
+    "source_name":"customer_tickets",
+    "source_type":"csv",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\customer_tickets.csv",
+    "title":"customer_tickets row 2",
+    "content":"ticket_id: CS-102 | customer: Northwind Labs | issue: CSV export missing dates | priority: medium",
+    "normalized_text":"customer_tickets row 2. ticket_id: CS-102 | customer: Northwind Labs | issue: CSV export missing dates | priority: medium",
+    "metadata_json":"{\"columns\": [\"ticket_id\", \"customer\", \"issue\", \"priority\"], \"fields\": {\"customer\": \"Northwind Labs\", \"issue\": \"CSV export missing dates\", \"priority\": \"medium\", \"ticket_id\": \"CS-102\"}, \"kind\": \"csv_row\"}"
+  },
+  {
+    "record_id":"customer_tickets__csv__0003",
+    "source_name":"customer_tickets",
+    "source_type":"csv",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\customer_tickets.csv",
+    "title":"customer_tickets row 3",
+    "content":"ticket_id: CS-103 | customer: BluePeak | issue: Duplicate records in training set | priority: high",
+    "normalized_text":"customer_tickets row 3. ticket_id: CS-103 | customer: BluePeak | issue: Duplicate records in training set | priority: high",
+    "metadata_json":"{\"columns\": [\"ticket_id\", \"customer\", \"issue\", \"priority\"], \"fields\": {\"customer\": \"BluePeak\", \"issue\": \"Duplicate records in training set\", \"priority\": \"high\", \"ticket_id\": \"CS-103\"}, \"kind\": \"csv_row\"}"
+  },
+  {
+    "record_id":"extraction_notes__pdf__0101",
+    "source_name":"extraction_notes",
+    "source_type":"pdf",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\extraction_notes.pdf",
+    "title":"extraction_notes page 1",
+    "content":"Extraction Engine Notes The system collects structured and unstructured text from mixed enterprise sources. Normalization converts each item into a training-ready record with provenance metadata. Important checks include source-type detection, missing field handling, and issue logging. Failed rows should not stop the batch run; they should be surfaced in diagnostics instead.",
+    "normalized_text":"extraction_notes page 1. Extraction Engine Notes The system collects structured and unstructured text from mixed enterprise sources. Normalization converts each item into a training-ready record with provenance metadata. Important checks include source-type detection, missing field handling, and issue logging. Failed rows should not stop the batch run; they should be surfaced in diagnostics instead.",
+    "metadata_json":"{\"chunk_number\": 1, \"kind\": \"pdf_page_chunk\", \"page_number\": 1}"
+  },
+  {
+    "record_id":"project_tracker__spreadsheet__0001",
+    "source_name":"project_tracker",
+    "source_type":"spreadsheet",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\project_tracker.xlsx",
+    "title":"Ops checklist",
+    "content":"name: Ops checklist | owner: Rina | milestone: Parser QA | due_date: 2026-04-01",
+    "normalized_text":"Ops checklist. name: Ops checklist | owner: Rina | milestone: Parser QA | due_date: 2026-04-01",
+    "metadata_json":"{\"columns\": [\"name\", \"owner\", \"milestone\", \"due_date\"], \"fields\": {\"due_date\": \"2026-04-01\", \"milestone\": \"Parser QA\", \"name\": \"Ops checklist\", \"owner\": \"Rina\"}, \"kind\": \"spreadsheet_row\", \"sheet_name\": \"operations\"}"
+  },
+  {
+    "record_id":"project_tracker__spreadsheet__0002",
+    "source_name":"project_tracker",
+    "source_type":"spreadsheet",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\project_tracker.xlsx",
+    "title":"Infra review",
+    "content":"name: Infra review | owner: Dev | milestone: SQLite sync | due_date: 2026-04-03",
+    "normalized_text":"Infra review. name: Infra review | owner: Dev | milestone: SQLite sync | due_date: 2026-04-03",
+    "metadata_json":"{\"columns\": [\"name\", \"owner\", \"milestone\", \"due_date\"], \"fields\": {\"due_date\": \"2026-04-03\", \"milestone\": \"SQLite sync\", \"name\": \"Infra review\", \"owner\": \"Dev\"}, \"kind\": \"spreadsheet_row\", \"sheet_name\": \"operations\"}"
+  },
+  {
+    "record_id":"project_tracker__spreadsheet__0003",
+    "source_name":"project_tracker",
+    "source_type":"spreadsheet",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\project_tracker.xlsx",
+    "title":"PDF extraction survey",
+    "content":"title: PDF extraction survey | summary: Compared pypdf, OCR fallbacks, and layout-aware parsers.",
+    "normalized_text":"PDF extraction survey. title: PDF extraction survey | summary: Compared pypdf, OCR fallbacks, and layout-aware parsers.",
+    "metadata_json":"{\"columns\": [\"title\", \"summary\"], \"fields\": {\"summary\": \"Compared pypdf, OCR fallbacks, and layout-aware parsers.\", \"title\": \"PDF extraction survey\"}, \"kind\": \"spreadsheet_row\", \"sheet_name\": \"research\"}"
+  },
+  {
+    "record_id":"project_tracker__spreadsheet__0004",
+    "source_name":"project_tracker",
+    "source_type":"spreadsheet",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\project_tracker.xlsx",
+    "title":"Website extraction review",
+    "content":"title: Website extraction review | summary: Documented table parsing edge cases and malformed HTML handling.",
+    "normalized_text":"Website extraction review. title: Website extraction review | summary: Documented table parsing edge cases and malformed HTML handling.",
+    "metadata_json":"{\"columns\": [\"title\", \"summary\"], \"fields\": {\"summary\": \"Documented table parsing edge cases and malformed HTML handling.\", \"title\": \"Website extraction review\"}, \"kind\": \"spreadsheet_row\", \"sheet_name\": \"research\"}"
+  },
+  {
+    "record_id":"sample_portal__website__0001",
+    "source_name":"sample_portal",
+    "source_type":"website",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\sample_portal.html",
+    "title":"Open Source AI Readiness Bulletin",
+    "content":"Open Source AI Readiness Bulletin Weekly operating notes, milestones, and action items for the internship project. AI Ops Readiness Bulletin Current focus areas The analytics team is preparing a reusable extraction pipeline for internal knowledge assets. Source reliability is graded weekly, and failed rows are tracked for later review. Website parsing with resilient HTML cleanup PDF chunking for downstream fine-tuning datasets Spreadsheet normalization across business teams",
+    "normalized_text":"Open Source AI Readiness Bulletin. Open Source AI Readiness Bulletin Weekly operating notes, milestones, and action items for the internship project. AI Ops Readiness Bulletin Current focus areas The analytics team is preparing a reusable extraction pipeline for internal knowledge assets. Source reliability is graded weekly, and failed rows are tracked for later review. Website parsing with resilient HTML cleanup PDF chunking for downstream fine-tuning datasets Spreadsheet normalization across business teams",
+    "metadata_json":"{\"headings\": [\"AI Ops Readiness Bulletin\", \"Current focus areas\"], \"kind\": \"page_chunk\", \"meta_description\": \"Weekly operating notes, milestones, and action items for the internship project.\"}"
+  },
+  {
+    "record_id":"sample_portal__website__0102",
+    "source_name":"sample_portal",
+    "source_type":"website",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\sample_portal.html",
+    "title":"Data contracts",
+    "content":"owner: Anika | topic: Data contracts | status: active",
+    "normalized_text":"Data contracts. owner: Anika | topic: Data contracts | status: active",
+    "metadata_json":"{\"fields\": {\"owner\": \"Anika\", \"status\": \"active\", \"topic\": \"Data contracts\"}, \"kind\": \"table_row\", \"row_number\": 1, \"table_index\": 1}"
+  },
+  {
+    "record_id":"sample_portal__website__0103",
+    "source_name":"sample_portal",
+    "source_type":"website",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\sample_portal.html",
+    "title":"Schema validation",
+    "content":"owner: Rahul | topic: Schema validation | status: review",
+    "normalized_text":"Schema validation. owner: Rahul | topic: Schema validation | status: review",
+    "metadata_json":"{\"fields\": {\"owner\": \"Rahul\", \"status\": \"review\", \"topic\": \"Schema validation\"}, \"kind\": \"table_row\", \"row_number\": 2, \"table_index\": 1}"
+  },
+  {
+    "record_id":"team_notes__database__0001",
+    "source_name":"team_notes",
+    "source_type":"database",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\team_notes.sqlite",
+    "title":"team_notes row 1",
+    "content":"incident_id: INC-1 | severity: warning | description: Spreadsheet sheet had unnamed column.",
+    "normalized_text":"team_notes row 1. incident_id: INC-1 | severity: warning | description: Spreadsheet sheet had unnamed column.",
+    "metadata_json":"{\"columns\": [\"incident_id\", \"severity\", \"description\"], \"fields\": {\"description\": \"Spreadsheet sheet had unnamed column.\", \"incident_id\": \"INC-1\", \"severity\": \"warning\"}, \"kind\": \"database_row\", \"table_name\": \"incidents\"}"
+  },
+  {
+    "record_id":"team_notes__database__0002",
+    "source_name":"team_notes",
+    "source_type":"database",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\team_notes.sqlite",
+    "title":"team_notes row 2",
+    "content":"incident_id: INC-2 | severity: error | description: Source website returned malformed table markup.",
+    "normalized_text":"team_notes row 2. incident_id: INC-2 | severity: error | description: Source website returned malformed table markup.",
+    "metadata_json":"{\"columns\": [\"incident_id\", \"severity\", \"description\"], \"fields\": {\"description\": \"Source website returned malformed table markup.\", \"incident_id\": \"INC-2\", \"severity\": \"error\"}, \"kind\": \"database_row\", \"table_name\": \"incidents\"}"
+  },
+  {
+    "record_id":"team_notes__database__0003",
+    "source_name":"team_notes",
+    "source_type":"database",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\team_notes.sqlite",
+    "title":"Pipeline review",
+    "content":"meeting_id: 1 | subject: Pipeline review | owner: Ishaan | notes: Need stronger null handling.",
+    "normalized_text":"Pipeline review. meeting_id: 1 | subject: Pipeline review | owner: Ishaan | notes: Need stronger null handling.",
+    "metadata_json":"{\"columns\": [\"meeting_id\", \"subject\", \"owner\", \"notes\"], \"fields\": {\"meeting_id\": \"1\", \"notes\": \"Need stronger null handling.\", \"owner\": \"Ishaan\", \"subject\": \"Pipeline review\"}, \"kind\": \"database_row\", \"table_name\": \"meetings\"}"
+  },
+  {
+    "record_id":"team_notes__database__0004",
+    "source_name":"team_notes",
+    "source_type":"database",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\team_notes.sqlite",
+    "title":"Export format",
+    "content":"meeting_id: 2 | subject: Export format | owner: Sara | notes: JSON schema approved for training corpora.",
+    "normalized_text":"Export format. meeting_id: 2 | subject: Export format | owner: Sara | notes: JSON schema approved for training corpora.",
+    "metadata_json":"{\"columns\": [\"meeting_id\", \"subject\", \"owner\", \"notes\"], \"fields\": {\"meeting_id\": \"2\", \"notes\": \"JSON schema approved for training corpora.\", \"owner\": \"Sara\", \"subject\": \"Export format\"}, \"kind\": \"database_row\", \"table_name\": \"meetings\"}"
+  }
+]

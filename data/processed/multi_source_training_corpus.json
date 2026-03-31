@@ -1,0 +1,32 @@
+[
+  {
+    "record_id":"customer_tickets__csv__0001",
+    "source_name":"customer_tickets",
+    "source_type":"csv",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\customer_tickets.csv",
+    "title":"customer_tickets row 1",
+    "content":"ticket_id: CS-101 | customer: Mira Foods | issue: Delayed invoice parsing | priority: high",
+    "normalized_text":"customer_tickets row 1. ticket_id: CS-101 | customer: Mira Foods | issue: Delayed invoice parsing | priority: high",
+    "metadata_json":"{\"columns\": [\"ticket_id\", \"customer\", \"issue\", \"priority\"], \"fields\": {\"customer\": \"Mira Foods\", \"issue\": \"Delayed invoice parsing\", \"priority\": \"high\", \"ticket_id\": \"CS-101\"}, \"kind\": \"csv_row\"}"
+  },
+  {
+    "record_id":"customer_tickets__csv__0002",
+    "source_name":"customer_tickets",
+    "source_type":"csv",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\customer_tickets.csv",
+    "title":"customer_tickets row 2",
+    "content":"ticket_id: CS-102 | customer: Northwind Labs | issue: CSV export missing dates | priority: medium",
+    "normalized_text":"customer_tickets row 2. ticket_id: CS-102 | customer: Northwind Labs | issue: CSV export missing dates | priority: medium",
+    "metadata_json":"{\"columns\": [\"ticket_id\", \"customer\", \"issue\", \"priority\"], \"fields\": {\"customer\": \"Northwind Labs\", \"issue\": \"CSV export missing dates\", \"priority\": \"medium\", \"ticket_id\": \"CS-102\"}, \"kind\": \"csv_row\"}"
+  },
+  {
+    "record_id":"customer_tickets__csv__0003",
+    "source_name":"customer_tickets",
+    "source_type":"csv",
+    "source_location":"C:\\Users\\keert\\Documents\\Playground\\data\\raw\\sources\\customer_tickets.csv",
+    "title":"customer_tickets row 3",
+    "content":"ticket_id: CS-103 | customer: BluePeak | issue: Duplicate records in training set | priority: high",
+    "normalized_text":"customer_tickets row 3. ticket_id: CS-103 | customer: BluePeak | issue: Duplicate records in training set | priority: high",
+    "metadata_json":"{\"columns\": [\"ticket_id\", \"customer\", \"issue\", \"priority\"], \"fields\": {\"customer\": \"BluePeak\", \"issue\": \"Duplicate records in training set\", \"priority\": \"high\", \"ticket_id\": \"CS-103\"}, \"kind\": \"csv_row\"}"
+  }
+]

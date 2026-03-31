@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.pyc
+data/raw/images/*
+!data/raw/images/.gitkeep
+data/processed/*.csv
+data/chroma/
+models/downloads/
+temp_uploads/

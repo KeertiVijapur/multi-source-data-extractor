@@ -1,0 +1,4 @@
+ticket_id,customer,issue,priority
+CS-101,Mira Foods,Delayed invoice parsing,high
+CS-102,Northwind Labs,CSV export missing dates,medium
+CS-103,BluePeak,Duplicate records in training set,high
