@@ -1,41 +1,34 @@
-# Multi-Source Data Extraction Engine
+# Multi-Source Data Extractor
 
-This repository now implements Problem Statement 1 from the internship brief: a modular engine that collects information from heterogeneous sources, normalizes it into a training-ready schema, and exports reproducible CSV and JSON files using open-source tools only.
+## What this project does
 
-## Problem alignment
+This project can:
+- detect the type of input source
+- extract text/data from multiple source formats
+- handle structured and unstructured inputs
+- normalize the extracted content into one common schema
+- store the final output in CSV and JSON format
+- generate a diagnostics file for warnings and errors
 
-The project supports these source types:
-- websites (`.html`, `.htm`, and live `http/https` URLs)
-- PDFs
+## Supported source types
+
+The current version supports:
+- website pages (`html`, `htm`, and URL input)
+- PDF files
 - CSV files
-- spreadsheets (`.xlsx`, `.xls`)
-- SQLite databases (`.db`, `.sqlite`, `.sqlite3`)
+- Excel files (`xlsx`, `xls`)
+- SQLite databases
 
-For every extracted item, the system preserves provenance and converts content into one compact format suitable for downstream LLM training or fine-tuning workflows.
+## Tech stack used
 
-## What the system does
-
-1. Detects source type from a file path or URL.
-2. Uses a dedicated extractor for each source family.
-3. Handles mixed structured and unstructured content.
-4. Normalizes output into a shared schema.
-5. Logs warnings and errors instead of failing the whole batch.
-6. Exports clean records to CSV and JSON.
-7. Exports diagnostics separately for debugging and QA.
-
-## Normalized schema
-
-Each output row contains:
-- `record_id`
-- `source_name`
-- `source_type`
-- `source_location`
-- `title`
-- `content`
-- `normalized_text`
-- `metadata_json`
-
-This keeps the exported data simple enough for model training while still preserving detailed metadata for auditability.
+- Python
+- Pandas
+- BeautifulSoup
+- Requests
+- PyPDF
+- OpenPyXL
+- Streamlit
+- ReportLab
 
 ## Project structure
 
@@ -56,91 +49,95 @@ data/
   exports/
 ```
 
+## How the system works
+
+1. The user provides one or more source files or a website URL.
+2. The system detects the source type.
+3. A matching extractor is used for that source.
+4. The extracted content is cleaned and normalized.
+5. Each extracted item is converted into a common output format.
+6. Final results are exported as CSV and JSON.
+7. If any issue happens during extraction, it is stored separately in diagnostics.
+
+## Output format
+
+Each normalized record contains:
+- `record_id`
+- `source_name`
+- `source_type`
+- `source_location`
+- `title`
+- `content`
+- `normalized_text`
+- `metadata_json`
+
+## Features
+
+- Multi-source extraction in one pipeline
+- Source type detection
+- Separate extractors for each file type
+- Normalized training-ready output
+- Error and warning logging
+- Streamlit UI for demo
+- Sample data generator for testing
+
 ## Setup
 
+Open terminal in the project folder and run:
+
 ```bash
-cd C:\Users\keert\Documents\Playground
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Optional environment values:
+If needed:
 
 ```bash
 copy .env.example .env
 ```
 
-## Quick start
+## How to run the project
 
-Generate demo sources:
+### 1. Create sample input files
 
 ```bash
 python -m scripts.create_sample_sources
 ```
 
-Run the extraction pipeline:
+### 2. Run the pipeline from terminal
 
 ```bash
 python -m scripts.run_pipeline
 ```
 
-Launch the Streamlit app:
+### 3. Run the Streamlit app
 
 ```bash
-streamlit run app/streamlit_app.py
+python -m streamlit run app/streamlit_app.py
 ```
 
-## Sample sources included by script
+## Demo flow
 
-The sample generator creates:
-- an HTML page with paragraphs and a table
-- a CSV file with support tickets
-- an Excel workbook with two sheets
-- a SQLite database with two tables
-- a PDF containing operational notes
+For demo, I can show:
+- sample HTML file
+- sample PDF file
+- sample CSV file
+- sample Excel file
+- sample SQLite database
+- extraction result in the Streamlit UI
+- exported CSV/JSON files
+- diagnostics file
 
-This makes the project easy to demo locally even without internet access.
+## What I learned
 
-## Design notes
+Through this project, I learned:
+- how to work with multiple data formats in Python
+- how to build modular extractors
+- how to normalize mixed data into a standard format
+- how to make a data pipeline more reliable with diagnostics
+- how to convert a backend pipeline into a simple demo application using Streamlit
 
-### Extractor strategy
-- `WebsiteExtractor` parses page text and HTML tables.
-- `PdfExtractor` reads page text and chunks longer content.
-- `CsvExtractor` converts each row into a training record.
-- `SpreadsheetExtractor` processes every sheet in a workbook.
-- `SQLiteExtractor` scans all user tables and extracts rows.
+## Conclusion
 
-### Error handling
-- source-specific issues are captured as diagnostics
-- empty or malformed content produces warnings instead of aborting the run
-- the pipeline still exports successful records even if one source partially fails
-
-### Reproducibility
-- sample data is generated locally
-- outputs are written to deterministic file locations
-- dependencies are open source only
-
-## Research summary
-
-Before implementation, I mapped the assignment against common approaches used in document ETL systems and training-data preparation tools. The design here follows a simple, explainable extractor-per-source model instead of a black-box ingestion framework so the full pipeline stays easy to understand and present during evaluation.
-
-## Iterations and failed attempts
-
-1. Initial repo state was a lost-and-found multimodal search project, which did not match any of the internship problem statements.
-2. I briefly evaluated reusing the old semantic-search pipeline, but it would have forced the assignment into the wrong problem category.
-3. The final direction replaced that logic with a purpose-built extraction engine centered on source detection, normalization, and diagnostics.
-
-## Known limitations
-
-- PDF extraction is text-based and does not include OCR for scanned documents.
-- Website extraction works best on static HTML pages.
-- SQLite is the supported database target in this version; other databases can be added through new extractor classes.
-
-## Next improvements
-
-- add OCR fallback for scanned PDFs
-- add schema validation rules per source domain
-- add deduplication scoring across sources
-- add scheduling/automation for recurring ingestion
-- add unit tests around each extractor
+This project is a practical multi-source data extraction system built with open-source tools. It can take different input formats, extract useful information, normalize the output, and prepare clean data files for further AI/LLM use.
