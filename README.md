@@ -1,5 +1,6 @@
 # Multi-Source Data Extractor
 A Python-based pipeline that extracts and standardizes data from multiple file formats into a unified structure.
+(My focus was prioritized on functionality, requirements, and outcomes rather than visual design or UI aesthetics)
 
 ## What it does
 * Detects input source type automatically
@@ -9,7 +10,7 @@ A Python-based pipeline that extracts and standardizes data from multiple file f
 * Logs errors and warnings in a diagnostics file
 
 ## Demo Video
-[https://drive.google.com/file/d/1N9xalfXCE7Plg1HQ5rBaAQ7tUscowrrE/view?usp=sharing](https://drive.google.com/file/d/1N9xalfXCE7Plg1HQ5rBaAQ7tUscowrrE/view?usp=sharing)
+[https://drive.google.com/file/d/1mOGPcza6Q3HrkjkeZiZ_JqtKkI2P9DyR/view?usp=sharing](https://drive.google.com/file/d/1mOGPcza6Q3HrkjkeZiZ_JqtKkI2P9DyR/view?usp=sharing)
 
 ## Supported Sources
 * HTML / Web URLs
