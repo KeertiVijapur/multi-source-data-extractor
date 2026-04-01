@@ -1,5 +1,6 @@
 # Multi-Source Data Extractor
 A Python-based pipeline that extracts and standardizes data from multiple file formats into a unified structure.
+
 (My focus was prioritized on functionality, requirements, and outcomes rather than visual design or UI aesthetics)
 
 ## What it does
